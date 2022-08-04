@@ -90,7 +90,7 @@ export default class AliyunPuth {
    * 查询目标绑定的标签，当前仅支持查询设备标签。
    * @param target 目标类型 1：本设备
    */
-  static listTag(target: TargetType): Promise<string[]>;
+  static listTags(target: TargetType): Promise<string[]>;
 
   /**
    * 添加别名
