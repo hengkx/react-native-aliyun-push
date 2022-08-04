@@ -76,7 +76,7 @@ export default class AliyunPuth {
    * @param tags 标签（数组输入）
    * @param alias 别名，仅当target=3时生效
    */
-  static bindTag(target: TargetType, tags: string[], alias: string[]): Promise<string>;
+  static bindTag(target: TargetType, tags: string[], alias?: string): Promise<string>;
 
   /**
    * 解绑TAG
@@ -84,7 +84,7 @@ export default class AliyunPuth {
    * @param tags 标签（数组输入）
    * @param alias 别名，仅当target=3时生效
    */
-  static unbindTag(target: TargetType, tags: string[], alias: string[]): Promise<string>;
+  static unbindTag(target: TargetType, tags: string[], alias?: string): Promise<string>;
 
   /**
    * 查询目标绑定的标签，当前仅支持查询设备标签。
