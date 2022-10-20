@@ -25,9 +25,6 @@ android {
 
 repositories {
     jcenter()
-    // maven {
-    //     url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
-    // }
     // 配置HMS Core SDK的Maven仓地址。
     maven {
         url 'https://developer.huawei.com/repo/'
