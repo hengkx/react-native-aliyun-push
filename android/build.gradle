@@ -32,24 +32,24 @@ repositories {
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'com.facebook.react:react-native:+'
 
-    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+    // implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
-    api 'com.aliyun.ams:alicloud-android-push:3.4.0'
+    // api 'com.aliyun.ams:alicloud-android-push:3.4.0'
 
-    api 'com.aliyun.ams:alicloud-android-third-push:3.4.0'
-    // 华为依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.4.0'
-    // 小米依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.4.0'
-    // OPPO依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.4.0'
-    // vivo依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.4.0'
-    // 魅族依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.4.0'
+    // api 'com.aliyun.ams:alicloud-android-third-push:3.4.0'
+    // // 华为依赖
+    // api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.7.7'
+    // // 小米依赖
+    // api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.4.0'
+    // // OPPO依赖
+    // api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.4.0'
+    // // vivo依赖
+    // api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.4.0'
+    // // 魅族依赖
+    // api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.4.0'
     // 谷歌依赖
     // api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.4.0'
 }
