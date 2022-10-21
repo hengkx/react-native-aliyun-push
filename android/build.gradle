@@ -35,13 +35,12 @@ repositories {
 }
 
 dependencies {
-//    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'com.facebook.react:react-native:+'
 
     implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
     api ('com.aliyun.ams:alicloud-android-push:3.7.4') {
-        exclude(module:'alicloud-android-utdid')
+        // exclude(module:'alicloud-android-utdid')
     }
     api 'com.aliyun.ams:alicloud-android-third-push:3.7.4'
     //华为依赖
