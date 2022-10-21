@@ -35,7 +35,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'com.facebook.react:react-native:+'
 
-    // implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
     // api 'com.aliyun.ams:alicloud-android-push:3.4.0'
 
