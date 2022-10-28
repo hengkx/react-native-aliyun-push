@@ -39,7 +39,6 @@ import com.facebook.common.logging.FLog;
 import com.alibaba.sdk.android.push.CloudPushService;
 import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
 import com.alibaba.sdk.android.push.CommonCallback;
-import me.leolin.shortcutbadger.ShortcutBadger;
 
 import org.wonday.aliyun.push.MIUIUtils;
 
@@ -116,7 +115,6 @@ public class AliyunPushModule extends ReactContextBaseJavaModule implements Life
             FLog.d(ReactConstants.TAG, "setApplicationIconBadgeNumber for normal");
 
             try {
-                ShortcutBadger.applyCount(this.context, badgeNumber);
                 this.badgeNumber = badgeNumber;
                 promise.resolve("");
             } catch (Exception e){

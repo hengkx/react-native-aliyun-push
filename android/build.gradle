@@ -53,8 +53,4 @@ dependencies {
     api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.7.7'
     //谷歌依赖
     //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.7.4'
-
-    // shortcutBadger
-    api 'me.leolin:ShortcutBadger:1.1.22@aar'
-
 }
