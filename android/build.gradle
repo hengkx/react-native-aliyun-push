@@ -3,56 +3,57 @@ apply plugin: 'com.android.library'
 description = 'react-native-aliyun-push'
 
 buildscript {
-    repositories {
-        maven { url "https://maven.aliyun.com/repository/public" }
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.1'
-        classpath 'com.google.gms:google-services:3.0.0'
-    }
+  repositories {
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/google" }
+  }
+  
+  dependencies {
+    classpath 'com.android.tools.build:gradle:7.3.1'
+    classpath 'com.google.gms:google-services:3.0.0'
+  }
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion '30.0.3'
+  compileSdkVersion 33
+  buildToolsVersion '33.0.0'
 
-    defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 31
-    }
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 33
+  }
 }
 
 repositories {
-    maven { url "https://maven.aliyun.com/repository/public" }
-    maven {
-      url 'https://maven.aliyun.com/nexus/content/repositories/releases/'
-    }
-    // 配置HMS Core SDK的Maven仓地址。
-    maven {
-        url 'https://developer.huawei.com/repo/'
-    }
+  maven { url "https://maven.aliyun.com/repository/public" }
+  maven {
+    url 'https://maven.aliyun.com/nexus/content/repositories/releases/'
+  }
+  // 配置HMS Core SDK的Maven仓地址。
+  maven {
+    url 'https://developer.huawei.com/repo/'
+  }
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
+  implementation 'com.facebook.react:react-native:+'
 
-    api ('com.aliyun.ams:alicloud-android-push:3.8.0') {
-        // exclude(module:'alicloud-android-utdid')
-    }
-    api 'com.aliyun.ams:alicloud-android-third-push:3.8.0'
-    //华为依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.0'
-    //小米依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.0'
-    //OPPO依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.0'
-    //vivo依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.0'
-    //魅族依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.8.0'
-    //荣耀
-    api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.0'
-    //谷歌依赖
-    //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.8.0'
+  api ('com.aliyun.ams:alicloud-android-push:3.8.1') {
+    // exclude(module:'alicloud-android-utdid')
+  }
+  api 'com.aliyun.ams:alicloud-android-third-push:3.8.1'
+  //华为依赖
+  api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.1'
+  //小米依赖
+  api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.1'
+  //OPPO依赖
+  api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.1'
+  //vivo依赖
+  api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.1'
+  //魅族依赖
+  api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.8.1'
+  //荣耀
+  api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.1'
+  //谷歌依赖
+  //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.8.1'
 }
