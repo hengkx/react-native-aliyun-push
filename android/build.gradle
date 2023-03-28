@@ -38,22 +38,22 @@ repositories {
 dependencies {
   implementation 'com.facebook.react:react-native:+'
 
-  api ('com.aliyun.ams:alicloud-android-push:3.8.1') {
+  api ('com.aliyun.ams:alicloud-android-push:3.8.3') {
     // exclude(module:'alicloud-android-utdid')
   }
-  api 'com.aliyun.ams:alicloud-android-third-push:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push:3.8.3'
   //华为依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.3'
   //小米依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.3'
   //OPPO依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.3'
   //vivo依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.3'
   //魅族依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.8.3'
   //荣耀
-  api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.1'
+  api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.3'
   //谷歌依赖
-  //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.8.1'
+  //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.8.3'
 }
