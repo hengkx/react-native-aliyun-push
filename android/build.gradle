@@ -10,17 +10,16 @@ buildscript {
   
   dependencies {
     classpath 'com.android.tools.build:gradle:7.3.1'
-    classpath 'com.google.gms:google-services:3.0.0'
+//    classpath 'com.google.gms:google-services:3.0.0'
   }
 }
 
 android {
-  compileSdkVersion 33
-  buildToolsVersion '33.0.0'
+  compileSdkVersion 34
 
   defaultConfig {
-    minSdkVersion 21
-    targetSdkVersion 33
+    minSdkVersion 23
+    targetSdkVersion 34
   }
 }
 
@@ -38,22 +37,22 @@ repositories {
 dependencies {
   implementation 'com.facebook.react:react-native:+'
 
-  api ('com.aliyun.ams:alicloud-android-push:3.8.8') {
+  api ('com.aliyun.ams:alicloud-android-push:3.9.1') {
     // exclude(module:'alicloud-android-utdid')
   }
-  api 'com.aliyun.ams:alicloud-android-third-push:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push:3.9.0'
   //华为依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.9.0'
   //小米依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.9.0'
   //OPPO依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.9.0'
   //vivo依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.9.0'
   //魅族依赖
-  api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.9.0'
   //荣耀
-  api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.8'
+  api 'com.aliyun.ams:alicloud-android-third-push-honor:3.9.0'
   //谷歌依赖
-  //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.8.8'
+  //  api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.9.0'
 }
