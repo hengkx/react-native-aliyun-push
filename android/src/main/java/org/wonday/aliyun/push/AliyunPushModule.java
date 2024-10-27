@@ -9,6 +9,9 @@
  package org.wonday.aliyun.push;
 
 
+ import android.os.Handler;
+ import android.os.Looper;
+
  import androidx.annotation.NonNull;
  
  import com.facebook.react.bridge.ReactApplicationContext;
@@ -216,12 +219,15 @@
        }
      });
    }
- 
+
    @Override
    public void onHostResume() {
-     ThirdPartMessageActivity.mainClass = getCurrentActivity().getClass();
+     new Handler(Looper.getMainLooper()).post(() -> {
+       if (getCurrentActivity() != null) {
+         ThirdPartMessageActivity.mainClass = getCurrentActivity().getClass();
+       }
+     });
    }
- 
    @Override
    public void onHostPause() {
    }
