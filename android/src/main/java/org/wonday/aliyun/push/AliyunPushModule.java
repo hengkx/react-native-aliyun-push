@@ -8,10 +8,6 @@
 
  package org.wonday.aliyun.push;
 
-
- import android.os.Handler;
- import android.os.Looper;
-
  import androidx.annotation.NonNull;
  
  import com.facebook.react.bridge.ReactApplicationContext;
@@ -222,11 +218,12 @@
 
    @Override
    public void onHostResume() {
-     new Handler(Looper.getMainLooper()).post(() -> {
-       if (getCurrentActivity() != null) {
-         ThirdPartMessageActivity.mainClass = getCurrentActivity().getClass();
-       }
-     });
+     if (getCurrentActivity() != null) {
+       ThirdPartMessageActivity.mainClass = getCurrentActivity().getClass();
+     } else {
+       // 可以记录日志或进行其他处理
+       FLog.d(ReactConstants.TAG, "Current activity is null in onHostResume");
+     }
    }
    @Override
    public void onHostPause() {
