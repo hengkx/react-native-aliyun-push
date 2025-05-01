@@ -12,7 +12,7 @@
 #import <React/RCTUtils.h>
 
 #import "AliyunPushManager.h"
-#import <CloudPushSDK/CloudPushSDK.h>
+#import "CloudPushSDK/CloudPushSDK.h"
 
 // iOS 10 notification
 #import <UserNotifications/UserNotifications.h>
