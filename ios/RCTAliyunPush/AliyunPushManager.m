@@ -432,10 +432,10 @@ RCT_EXPORT_METHOD(getAuthorizationStatus:(RCTResponseSenderBlock)callback)
 {
     
     // 正式上线建议关闭
-    //[CloudPushSDK turnOnDebug];
+    //[CloudPushSDK setLogLevel:MPLogLevelInfo];
     
     // SDK初始化
-    [CloudPushSDK asyncInit:appKey appSecret:appSecret callback:^(CloudPushCallbackResult *res) {
+    [CloudPushSDK startWithAppkey:appKey appSecret:appSecret callback:^(CloudPushCallbackResult *res) {
         if (res.success) {
             DLog(@"Push SDK init success, deviceId: %@.", [CloudPushSDK getDeviceId]);
         } else {
@@ -655,10 +655,10 @@ RCT_EXPORT_METHOD(getAuthorizationStatus:(RCTResponseSenderBlock)callback)
     
     NSMutableDictionary *notificationDict = [NSMutableDictionary dictionary];
     
-    CCPSysMessage *message = [notification object];
+    NSDictionary *data = [notification object];
     
-    notificationDict[@"title"] = [[NSString alloc] initWithData:message.title encoding:NSUTF8StringEncoding];
-    notificationDict[@"body"] = [[NSString alloc] initWithData:message.body encoding:NSUTF8StringEncoding];
+    notificationDict[@"title"] = data[@"title"];
+    notificationDict[@"body"] = data[@"body"];
     // 取得通知自定义字段内容
     if (notification.userInfo) {
         notificationDict[@"extras"] = notification.userInfo;

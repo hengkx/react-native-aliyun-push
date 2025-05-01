@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target = "9.0"
   spec.source         = { :git => 'https://github.com/hengkx/react-native-aliyun-push.git', :tag => "v#{spec.version}"}
   spec.source_files  =  "ios/**/*.{h,m}"
-  spec.dependency 'AlicloudPush', '~> 1.9.9'
+  spec.dependency 'AlicloudPush', '~> 3'
   spec.libraries = "z", "resolv", "sqlite3"
 
   spec.requires_arc = true
